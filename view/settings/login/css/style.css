@@ -1,0 +1,232 @@
+/*CSS for Login View*/
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: courier;
+    padding:0;
+    margin:0;
+}    
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /*background: #4e4e4e;*/
+    background-color: #070607;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23656964' fill-opacity='0.12' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+#bodyDiv {
+    width: 100%;
+    height: 100%;
+    background: #696d6f;
+    border: 2px solid #838383;
+    -moz-border-radius: 18px;
+    -webkit-border-radius: 18px;
+    border-radius: 18px;
+    box-shadow: inset 0px 0px 42px -5px #141313;
+    -webkit-box-shadow: inset 0px 0px 42px -5px #141313;
+    -moz-box-shadow: inset 0px 0px 42px -5px #141313;
+    -o-box-shadow: inset 0px 0px 42px -5px #141313;
+}
+
+.animateHeading {
+    text-align: center;
+    position: relative;
+    height: 120px;
+    padding:10px;
+}
+
+.centerLogo {
+    position: fixed;
+    top: 50%;
+    margin-top: -50px;
+    left:50%;
+    margin-left: -50px; 
+    width: 100px;
+    z-index: 1;
+}
+
+.login-form {
+    width: 100%;
+    height: auto;
+    padding: 0 20%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    -moz-transform: translateY(-25%);
+    -ms-transform: translateY(-25%);
+    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%);
+}
+
+.form-group {
+    position: relative;
+    /*margin-bottom: 20px;*/
+}
+
+.form-control {
+    width: 100%;
+    height: 40px;
+    border: none;
+    /*padding: 5px 7px 5px 15px;*/
+    /*margin: auto;*/
+    background: #fff;
+    color: #666;
+    border: 2px solid #ddd;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+label {
+    /*height:5px;*/
+    display: block;
+    font-size:5px;
+    margin:0 auto;
+    padding:0;
+}
+
+.form-control, input[text]{
+    opacity: 0;
+    font-size: 0.8em;
+    padding-left:5px;
+}
+
+.form-control:focus, .form-control:focus + .fa {
+    border-color: #10CE88;
+    color: #10CE88;
+}
+
+.form-group .fa {
+    position: absolute;
+    right: 15px;
+    top: 17px;
+    color: #999;
+}
+
+.log-status.wrong-entry {
+    -moz-animation: wrong-log 0.3s;
+    -webkit-animation: wrong-log 0.3s;
+    animation: wrong-log 0.3s;
+}
+
+.log-status.wrong-entry .form-control, .wrong-entry .form-control + .fa {
+    border-color: #ed1c24;
+    color: #ed1c24;
+}
+
+.log-btn {
+    opacity: 0;
+    background: #0AC986;
+    display: inline-block;
+    width:100%;
+    font-size: 0.8em;
+    height: 35px;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+}
+
+.log-btn:hover {
+    cursor: pointer;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+}
+.link {
+    text-decoration: none;
+    font-size: 0.8em;
+    text-align: center;
+    /*color:#696d6f;*/
+    color:#221e1d;
+}
+.link:hover {
+    text-decoration: underline;
+    color: #8C918F;
+}
+
+.error {
+    display: none;
+    font-size: 0.8em;
+    /*margin-bottom:15px;*/
+    color: #f00;
+    float: left;
+}
+
+@-moz-keyframes wrong-log {
+    0%, 100% {
+        left: 0px;
+    }
+    20% , 60% {
+        left: 15px;
+    }
+    40% , 80% {
+        left: -15px;
+    }
+}
+
+@-webkit-keyframes wrong-log {
+    0%, 100% {
+        left: 0px;
+    }
+    20% , 60% {
+        left: 15px;
+    }
+    40% , 80% {
+        left: -15px;
+    }
+}
+
+@keyframes wrong-log {
+    0%, 100% {
+        left: 0px;
+    }
+    20% , 60% {
+        left: 15px;
+    }
+    40% , 80% {
+        left: -15px;
+    }
+}
+
+/*500 px or more*/
+@media screen  and (min-width: 500px) {
+    .login-form {
+        padding: 0 30%;
+        position: relative;
+        top: 55%;
+    }
+}
+
+/*750 px or more*/
+@media screen  and (min-width: 800px) /* Tablet */ {
+    .login-form {
+        padding: 0 18%;
+        position: relative;
+        top: 55%;
+    }
+    #bodyDiv {
+        width: 320px;
+        height: 50%;
+    }  
+}
+
+/*980 px or more*/
+@media screen and (min-width: 980px) /* Desktop */ {
+    #bodyDiv {
+        height: 420px;
+    }
+}

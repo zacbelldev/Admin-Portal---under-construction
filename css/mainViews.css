@@ -1,0 +1,103 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : May 3, 2017, 7:46:12 PM
+    Author     : Zac
+*/
+
+/*500 px or more*/
+@media screen and (min-width: 500px) {
+
+}
+
+/*750 px or more*/
+@media screen and (min-width: 750px) {
+    #mainContainer {
+        width: calc(100% - 150px);
+    }
+
+    .mainContainerChildHexContainer {
+        width: 100%;
+        height: calc(100% - 80px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mainContainerChildHexChild {
+        margin: 55px 5px 5px 5px;
+        padding: 10px 20px;
+        width: auto;
+    }
+
+    .hex {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0.6;
+        float: left;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom: -26px;
+        position: relative;
+        width: 150px;
+        height: 86.60px;
+        background-color: #2a2a2a;
+    }
+
+    .hex:before,
+    .hex:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        border-left: 75px solid transparent;
+        border-right: 75px solid transparent;
+    }
+
+    .hex:before {
+        bottom: 100%;
+        border-bottom: 43.30px solid #2a2a2a;
+    }
+
+    .hex:after {
+        top: 100%;
+        width: 0;
+        border-top: 43.30px solid #2a2a2a;
+    }
+
+    .hex:hover {
+        opacity: 1;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        color: #DBDBDB !important;
+    }
+
+    .hex-row {
+        height: 140px;
+        clear: left;
+    }
+
+    .hex-row-even {
+        height: 140px;
+        margin-left: 80px;
+    }
+
+    .overlayText {
+        text-align: center;
+        position: relative;
+        z-index: 100;
+    }
+}
+
+/*888 px or more*/
+@media screen and (min-width: 888px) {
+
+}
+
+/*1080 px or more*/
+@media screen and (min-width: 1080px) {
+
+}

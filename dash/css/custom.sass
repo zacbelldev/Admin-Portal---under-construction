@@ -1,0 +1,122 @@
+//$nav-bar-backcolor: #383838
+//
+//body
+//  background-color: $nav-bar-backcolor
+
+
+
+$font-stack: Helvetica, sans-serif
+$primary-color: #aaaaaa
+$charcoal: #383838
+$tooth: #fffeff
+$nav-font: 12px
+$nav-line-height: 14px
+
+li a
+  font: 100% $font-stack
+  color: $tooth
+
+.menu > li > a
+  padding: 0
+
+.menu > li
+  vertical-align: top
+
+#main-menu, .top-bar ul
+  height: 30px
+  margin: 0
+  background-color: $charcoal
+  color: $tooth
+  font-size: $nav-font
+
+li.has-submenu
+  line-height: $nav-line-height
+
+#nav-items
+  width: 75%
+  display: block
+  //margin-right: auto
+  margin-left: auto
+
+
+#heading-bar-top, #heading-bar-bottom
+  //height: 60px
+  margin: 0
+  background-color: $tooth
+  color: $charcoal
+  padding: 15px
+
+#logoTest
+  height: 40px
+
+
+//Dashboard
+
+//Grid
+
+.grid
+  padding-right: 20px
+  padding-left: 20px
+  display: flex
+  justify-content: center
+
+// Grid Elements
+
+$one: 100px
+$two: 200px
+$three: 300px
+$four: 400px
+
+
+// blocks - auto
+
+.grid-auto
+  min-width: 390px
+  min-height: 190px
+  margin: 5px
+
+
+// blocks - percentage of view
+//
+//.grid-percent
+//  min-width: calc(30% - 40px)
+//  min-height: 190px
+
+
+// blocks - pixel
+
+.gridOneByOne
+  width: $one
+  height: $one
+
+.gridOneByTwo
+  width: $one
+  height: $two
+
+.gridTwoByOne
+  width: $two
+  height: $one
+
+.gridTwoByTwo
+  width: $two
+  height: $two
+
+.gridTwoByThree
+  width: $two
+  height: $three
+
+.gridThreeByTwo
+  width: $three
+  height: $two
+
+.gridThreeByThree
+  width: $three
+  height: $three
+
+.gridFourByTwo
+  width: $four
+  height: $two
+
+.gridFourByThree
+  width: $four
+  height: $three
